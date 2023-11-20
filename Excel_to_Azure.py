@@ -6,11 +6,11 @@ import pandas as pd
 import pyodbc
 
 azure_server = 'retail-sales-dw.database.windows.net' 
-azure_database = 'retail-sales-dw'
+azure_database = 'master'
 azure_username = 'Lucas'
 azure_password = '1202Abc!' 
 
-dag = DAG('excel_to_azure', start_date=datetime(2023, 3, 10))
+dag = DAG('Excel_to_Azure', start_date=datetime(2023, 3, 10))
 
 def extract():
     df = pd.read_excel('C:/Users/lucas/OneDrive/Desktop/VSproject/Retails_DW/Retails_DW/sample_data.xlsx')
