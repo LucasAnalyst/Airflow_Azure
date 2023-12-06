@@ -25,8 +25,11 @@ I. Ubuntu 22.04
 -> Update all Ubuntu 22.04 software packages with "sudo apt update && sudo apt upgrade -y"
 
 II. Visual Studio Code:
+
   Download Visual Studio Code: [here](https://code.visualstudio.com/download)
+  
   Python3.10.12
+  
 -> Open Terminal (shift+`):
 
     > Ubuntu
@@ -67,9 +70,9 @@ II. Visual Studio Code:
 
      > sudo apt-get install unixodbc-dev
     
-
+Here is my dag file [LoadtoAzure.py](dags/LoadtoAzure.py)
 ## Data Extraction
-In the data extraction phase, we retrieve data from various sources, including APIs and databases. We perform data preprocessing and cleansing to ensure high-quality data for further processing.
+In the data extraction phase, we retrieve data from various sources, including APIs, databases, and Local folder. We perform data preprocessing and cleansing to ensure high-quality data for further processing.
 
 ## Data Transformation
 Using Airflow, we implement data transformation tasks that manipulate, filter, and aggregate the extracted data. We leverage custom Python code and Airflow operators to carry out these operations efficiently.
