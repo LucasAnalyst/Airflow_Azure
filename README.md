@@ -1,4 +1,3 @@
-
 <img src="Pics/folder.svg" width="50" height="50"> >> <img src="Pics/airflow.svg" width="50" height="50"> >> <img src="Pics/microsoft-azure.svg" width="70"  height="50"> >> <img src="Pics/power-bi.svg" width="50" height="50">
 
 # Airflow Project: Data Pipeline with Cloud Azure Database
@@ -47,22 +46,26 @@ II. Visual Studio Code:
     
 -> To connect with Azure Cloud Database we need to install ODBC package:
 
-   > sudo su 
-   > curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+     > sudo su 
+     > curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
    > #Download appropriate package for the OS version
+
    > #Choose only ONE of the following, corresponding to your OS version
    > #Ubuntu 22.04
-   > curl https://packages.microsoft.com/config/ubuntu/22.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
-   > exit
-   > sudo apt-get update
-   > sudo ACCEPT_EULA=Y apt-get install msodbcsql18
+
+     > curl https://packages.microsoft.com/config/ubuntu/22.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
+     > exit
+     > sudo apt-get update
+     > sudo ACCEPT_EULA=Y apt-get install msodbcsql18
    > # optional: for bcp and sqlcmd
-   > sudo ACCEPT_EULA=Y apt-get install mssql-tools
-   > echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
-   > echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
-   > source ~/.bashrc
+
+     > sudo ACCEPT_EULA=Y apt-get install mssql-tools
+     > echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
+     > echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+     > source ~/.bashrc
    > # optional: for unixODBC development headers
-   > sudo apt-get install unixodbc-dev
+
+     > sudo apt-get install unixodbc-dev
     
 
 ## Data Extraction
