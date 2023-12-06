@@ -8,11 +8,62 @@ Welcome to my Airflow project! This data pipeline project aims to extract, trans
 <!--![Project Architecture](Pics/architecture.png)
 The project architecture consists of three main components: data extraction, data transformation, and data loading. These components work together to ensure a smooth and streamlined data pipeline. -->
 
-## Prepare the environment for airflow
-Tools and platforms:
-- Visual Studio Code
-- Ubuntu 22.04 
+## Prepare the environment Apache Airflow in Windows 11 using a Linux VM
+I. Ubuntu 22.04
+  
+-> From Windows Features checkbox Windows Subsystem for Linux
 
+-> Search the store for "Ubuntu"
+
+-> Install Ubuntu 22.04 (it is not necessary to sign in to the store)
+
+-> Launch Ubuntu 22.04
+
+-> Enter a username. This will create a local user account and you will be automatically logged in to Ubuntu 22.04 as this user
+
+-> Enter a password for the user and enter a second time to confirm
+
+-> Update all Ubuntu 22.04 software packages with "sudo apt update && sudo apt upgrade -y"
+
+II. Visual Studio Code:
+  Download Visual Studio Code: [here](https://code.visualstudio.com/download)
+  Python3.10.12
+-> Open Terminal (shift+`):
+
+    > Ubuntu
+    > sudo apt install python3-pip
+    > nano ~/.bashrc 
+    
+-> Add this: AIRFLOW_HOME=/home/your_user_name/airflow then Ctrl+s Ctrl+x
+
+-> Install and run airflow:
+
+    > pip install apache-airflow
+    > airflow db init
+    > airflow user create -u admin -f admin -l admin -r Admin -e admin@admin.example.com
+    > airflow scheduler
+    > open another terminal and run airflow websever
+
+    
+-> To connect with Azure Cloud Database we need to install ODBC package:
+
+   > sudo su 
+   > curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+   > #Download appropriate package for the OS version
+   > #Choose only ONE of the following, corresponding to your OS version
+   > #Ubuntu 22.04
+   > curl https://packages.microsoft.com/config/ubuntu/22.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
+   > exit
+   > sudo apt-get update
+   > sudo ACCEPT_EULA=Y apt-get install msodbcsql18
+   > # optional: for bcp and sqlcmd
+   > sudo ACCEPT_EULA=Y apt-get install mssql-tools
+   > echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
+   > echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+   > source ~/.bashrc
+   > # optional: for unixODBC development headers
+   > sudo apt-get install unixodbc-dev
+    
 
 ## Data Extraction
 In the data extraction phase, we retrieve data from various sources, including APIs and databases. We perform data preprocessing and cleansing to ensure high-quality data for further processing.
