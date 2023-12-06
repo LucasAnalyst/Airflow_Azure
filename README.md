@@ -3,12 +3,16 @@
 
 # Airflow Project: Data Pipeline with Cloud Azure Database
 
-## Introduction
-Welcome to my Airflow project! This data pipeline project aims to extract, transform, and load data into a Cloud Azure Database. By leveraging the power of Airflow, I've automated the entire process, making it efficient and reliable.
-
 ## Project Overview
-![Project Architecture](Pics/architecture.png)
-The project architecture consists of three main components: data extraction, data transformation, and data loading. These components work together to ensure a smooth and streamlined data pipeline.
+Welcome to my Airflow project! This data pipeline project aims to extract, transform, and load data into a Cloud Azure Database. By leveraging the power of Airflow, I've automated the entire process, making it efficient and reliable.
+<!--![Project Architecture](Pics/architecture.png)
+The project architecture consists of three main components: data extraction, data transformation, and data loading. These components work together to ensure a smooth and streamlined data pipeline. -->
+
+## Prepare the environment for airflow
+Tools and platforms:
+- Visual Studio Code
+- Ubuntu 22.04 
+
 
 ## Data Extraction
 In the data extraction phase, we retrieve data from various sources, including APIs and databases. We perform data preprocessing and cleansing to ensure high-quality data for further processing.
