@@ -1,50 +1,50 @@
-Workflow
+
 <img src="Pics/folder.svg" width="50" height="50"> >> <img src="Pics/airflow.svg" width="50" height="50"> >> <img src="Pics/microsoft-azure.svg" width="70"  height="50"> >> <img src="Pics/power-bi.svg" width="50" height="50">
 
-Introduction:
+# Airflow Project: Data Pipeline with Cloud Azure Database
 
+## Introduction
+Welcome to my Airflow project! This data pipeline project aims to extract, transform, and load data into a Cloud Azure Database. By leveraging the power of Airflow, I've automated the entire process, making it efficient and reliable.
 
-Used Airflow to extract, transform, and load data into a Cloud Azure Database.
+## Project Overview
+![Project Architecture](Pics/architecture.png)
+The project architecture consists of three main components: data extraction, data transformation, and data loading. These components work together to ensure a smooth and streamlined data pipeline.
 
-Project Overview:
+## Data Extraction
+In the data extraction phase, we retrieve data from various sources, including APIs and databases. We perform data preprocessing and cleansing to ensure high-quality data for further processing.
 
-Provide an overview of the project architecture, highlighting the different components and their interactions.
-Include a high-level diagram or flowchart to visually represent the data pipeline.
-Data Extraction:
+## Data Transformation
+Using Airflow, we implement data transformation tasks that manipulate, filter, and aggregate the extracted data. We leverage custom Python code and Airflow operators to carry out these operations efficiently.
 
-Explain the data extraction process, including the source(s) from which you extracted data.
-Describe any data preprocessing or cleaning steps you performed.
-Data Transformation:
+## Data Loading
+Once the data is transformed, we load it into the Cloud Azure Database. We establish a secure connection to the database and optimize the loading process for maximum efficiency.
 
-Detail the data transformation steps you implemented using Airflow.
-Discuss any data manipulation, filtering, or aggregation techniques you applied.
-Highlight any custom Python code or Airflow operators you used.
-Data Loading:
+## File Naming Convention
+To maintain data integrity, we follow a consistent file naming convention. Each CSV file is named in a way that aligns with its corresponding table in the Azure Database, making it easier to manage and track data.
 
-Explain how you loaded the transformed data into the Cloud Azure Database.
-Specify the connection details and the method you used to establish the connection.
-Mention any optimizations or considerations you made for efficient data loading.
-File Naming Convention:
+## Results and Benefits
+This project has brought several benefits, including:
+- Improved data accessibility and availability
+- Automated data pipeline, reducing manual effort
+- Enhanced data quality and integrity
+- Efficient and scalable data loading into the Cloud Azure Database
+- Performance improvements achieved through benchmarking
 
-Describe how you named each CSV file to align with the corresponding table in the Azure Database.
-Explain the rationale behind your naming convention and how it helps maintain data integrity.
-Results and Benefits:
+## Future Enhancements
+Looking ahead, we have exciting plans for future enhancements, such as:
+- Incorporating additional data sources for a more comprehensive dataset
+- Implementing advanced analytics and visualization capabilities
+- Scaling the data pipeline to handle larger volumes of data
 
-Discuss the outcomes of your project, such as improved data accessibility, automation, or efficiency.
-Highlight any performance metrics or benchmarks that demonstrate the project's success.
-Future Enhancements:
+## Conclusion
+In conclusion, this Airflow project has successfully created a robust data pipeline for extracting, transforming, and loading data into a Cloud Azure Database. I would like to express my gratitude to the Airflow community and the various libraries and resources that supported this project.
 
-Share any ideas or plans for future enhancements or feature additions.
-This could include scalability improvements, additional data sources, or advanced analytics.
-Conclusion:
+## Code Repository
+Explore the project code in the [GitHub repository](https://github.com/yourusername/your-repo) for in-depth technical details and implementation specifics.
 
-Summarize your project's key achievements and the value it brings.
-Express gratitude to any contributors, libraries, or resources that helped you along the way.
-Code Repository:
+## References and Acknowledgments
+- Airflow Documentation: [airflow.apache.org](https://airflow.apache.org/)
+- Cloud Azure Database Documentation: [docs.microsoft.com/en-us/azure/azure-sql/database](https://docs.microsoft.com/en-us/azure/azure-sql/database)
+- Python Documentation: [docs.python.org](https://docs.python.org/)
 
-Provide a link to the GitHub repository where you've stored the project code.
-Encourage visitors to explore the repository for more in-depth technical details.
-References and Acknowledgments:
-
-Include a section where you acknowledge any external resources, tutorials, or libraries you used.
-Provide citations or links to relevant documentation or articles.
+Feel free to reach out if you have any questions or feedback. Happy exploring!
