@@ -1,8 +1,11 @@
+Workflow
+<img src="Pics/folder.svg" width="50" height="50"> >> <img src="Pics/airflow.svg" width="50" height="50"> >> <img src="Pics/microsoft-azure.svg" width="70"  height="50"> >> <img src="Pics/power-bi.svg" width="50" height="50">
 
 Introduction:
 
-Start with a brief introduction explaining the purpose and goals of your project.
-Mention that you used Airflow to extract, transform, and load data into a Cloud Azure Database.
+
+Used Airflow to extract, transform, and load data into a Cloud Azure Database.
+
 Project Overview:
 
 Provide an overview of the project architecture, highlighting the different components and their interactions.
