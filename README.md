@@ -42,7 +42,7 @@ II. Visual Studio Code:
     > airflow db init
     > airflow user create -u admin -f admin -l admin -r Admin -e admin@admin.example.com
     > airflow scheduler
-    > open another terminal and run airflow websever
+    > open another terminal and run "Ubuntu" then "airflow websever"
 
     
 -> To connect with Azure Cloud Database we need to install ODBC package:
