@@ -1,4 +1,4 @@
- <img src="Pics/folder.svg" width="50" height="50"> >> <img src="Pics/airflow.svg" width="50" height="50"> >> <img src="Pics/microsoft-azure.svg" width="70"  height="50"> >> <img src="Pics/poIr-bi.svg" width="50" height="50">
+ <img src="Pics/folder.svg" width="50" height="50"> >> <img src="Pics/airflow.svg" width="50" height="50"> >> <img src="Pics/microsoft-azure.svg" width="70"  height="50"> >> <img src="Pics/power-bi.svg" width="50" height="50">
 
 # Airflow Project: Data Pipeline with Cloud Azure Database
 
