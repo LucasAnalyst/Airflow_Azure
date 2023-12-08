@@ -66,7 +66,7 @@ II. Visual Studio Code:
      > echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
      > echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
      > source ~/.bashrc
-   > #optional: for unixODBC development headers
+   > #optional: for unixODBC development
 
      > sudo apt-get install unixodbc-dev
     
