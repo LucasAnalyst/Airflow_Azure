@@ -12,7 +12,7 @@ from airflow.utils.dates import days_ago
 # get dag directory path
 dag_path = os.getcwd()
 
-
+# create function transform_data
 def transform_data():
     products = pd.read_excel(os.path.join(dag_path, "Data/Retails/Products.xlsx"))
     transactions = pd.read_excel(os.path.join(dag_path, "Data/Retails/Transactions.xlsx"))
@@ -27,9 +27,8 @@ def transform_data():
     transactions.to_csv(f"{dag_path}/processed_data/Transactions.csv", index=False)   
     customers.to_csv(f"{dag_path}/processed_data/Customers.csv", index=False)
     stores.to_csv(f"{dag_path}/processed_data/Stores.csv", index=False)
-    
 
-
+# create function load_data
 def load_data():
     connection_string = 'Driver={ODBC Driver 18 for SQL Server};Server=tcp:retails-data.database.windows.net,1433;Database=Retails_DW;Uid=Lucas;Pwd=1202Abc!;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;'
     conn = pyodbc.connect(connection_string)
@@ -58,10 +57,10 @@ def load_data():
         
     # Retrieve existing records
         existing_ids = set()
-        cursor.execute(f"SELECT {table_name[:-1]}ID FROM {table_name}")
+        cursor.execute(f"SELECT {table_name[:-1]}ID FROM {table_name}")   #Example table name is Products and the ID column name is ProductID: {table_name[:-1]}
         existing_ids = {row[0] for row in cursor.fetchall()}
         
-    # Insert rows
+    # Check current data and insert new rows
         for _, row in records.iterrows():
             if row[f"{table_name[:-1]}ID"] not in existing_ids:
                 values = tuple(row)
@@ -85,7 +84,6 @@ ingestion_dag = DAG(
     catchup=False
 )
 
-
 task_1 = PythonOperator(
     task_id='transform_data',
     python_callable=transform_data,
@@ -97,6 +95,5 @@ task_2 = PythonOperator(
     python_callable=load_data,
     dag=ingestion_dag,
 )
-
 
 task_1 >> task_2 
