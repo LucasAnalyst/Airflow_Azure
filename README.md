@@ -3,7 +3,7 @@
 # Airflow Project: Data Pipeline with Cloud Azure Database
 
 ## Project Overview
-welcome to my Airflow project! This data pipeline project aims to extract, transform, and load data into a Cloud Azure Database. By leveraging the poIr of Airflow, I've automated the entire process, making it efficient and reliable.
+Welcome to my Airflow project! This data pipeline project aims to extract, transform, and load data into a Cloud Azure Database. By leveraging the poIr of Airflow, I've automated the entire process, making it efficient and reliable.
 <!--![Project Architecture](Pics/architecture.png)
 The project architecture consists of three main components: data extraction, data transformation, and data loading. These components work together to ensure a smooth and streamlined data pipeline. -->
 
