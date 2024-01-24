@@ -40,7 +40,7 @@ II. Visual Studio Code:
 
 -> Install and run airflow:
 
-    > pip install apache-airflow
+    > sudo pip install apache-airflow
     > airflow db init
     > airflow user create -u admin -f admin -l admin -r Admin -e admin@admin.example.com
     > airflow scheduler
