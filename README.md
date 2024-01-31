@@ -80,6 +80,27 @@ Using Airflow, I implement data transformation tasks that manipulate, filter, an
 
 ## Data Loading
 Once the data is transformed, I load it into the Cloud Azure Database. I establish a secure connection to the database and optimize the loading process for maximum efficiency.
+   
+   
+  > Cloud Azure Database, sql-server (Connection string ODBC)
+     
+  
+    datawarehouse_db_config = {
+
+      'Trusted_Connection': 'yes', 
+
+      'driver': '{ODBC Driver 18 for SQL Server}',
+
+      'server': 'tcp:retails-data.database.windows.net',
+
+      'database': '{}'.format(datawarehouse_name),
+
+      'user': 'Lucas',
+
+      'password': 'passwords',
+
+      'autocommit': True,
+    }
 
 ## File Naming Convention
 To maintain data integrity, I follow a consistent file naming convention. Each CSV file is named in a way that aligns with its corresponding table in the Azure Database, making it easier to manage and track data.
